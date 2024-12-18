@@ -45,7 +45,7 @@ print(f"Connecting to mongodb at {uri}")
 client = MongoClient(uri)
 db = client.test
 collection = db.changestream
-#TODO Add actual connection test using ping or hello
+#TODO Add actual connection test using ping or hello as drivers lazily create connections so creating the client is not enough
 print(f"Connected!")  
 
 if len(sys.argv) > 1:
