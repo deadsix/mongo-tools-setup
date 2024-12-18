@@ -39,11 +39,13 @@ def test():
     return avg_latency
 
 # MUST ADD YOUR MONGODB CONNECTION STRING!
+#TODO add command line options to initalize the script with the right variables
 uri = ""
 print(f"Connecting to mongodb at {uri}")
 client = MongoClient(uri)
 db = client.test
 collection = db.changestream
+#TODO Add actual connection test using ping or hello
 print(f"Connected!")  
 
 if len(sys.argv) > 1:
